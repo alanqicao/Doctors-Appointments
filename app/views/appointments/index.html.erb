@@ -1,0 +1,55 @@
+<h1>Appointments#index</h1>
+<h1><%= @doctor.name %>: appointments</h1>
+<%= link_to 'Add appointment', new_doctor_appointment_path(@doctor) %>
+<hr />
+
+<h2>Monday</h2>
+<ul>
+  <% @mondays.each do |monday| %>
+    <li>
+      <%= monday.user.full_name %>
+      <br />
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, monday), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+<h2>tuesday</h2>
+<ul>
+  <% @tuesdays.each do |tuesday| %>
+    <li>
+      <%= tuesday.user.full_name %>
+      <br />
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, tuesday), method: :delete %>
+    </li>
+ <% end %>
+</ul>
+<h2>wednesday</h2>
+<ul>
+  <% @wednesdays.each do |wednesday| %>
+    <li>
+      <%= wednesday.user.full_name %>
+      <br />
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, wednesday), method: :delete %>
+   </li>
+ <% end %>
+</ul>
+<h2>thursday</h2>
+<ul>
+  <% @thursdays.each do |thursday| %>
+    <li>
+      <%= thursday.user.full_name %>
+      <br />
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, thurday), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+<h2>friday</h2>
+<ul>
+  <% @fridays.each do |friday| %>
+    <li>
+      <%= friday.user.full_name %>
+      <br />
+      <%= link_to 'Remove', doctor_appointment_path(@doctor, friday), method: :delete %>
+    </li>
+  <% end %>
+</ul>
